@@ -8,6 +8,13 @@ Boilerplate for the HOF Migration company marketing website. This is a CMS-drive
 - **Content-managed** via Payload CMS admin panel at `/admin`
 - **Non-developers** can add blog posts, case studies, and block-based pages without touching code
 
+## What this project is NOT
+
+- **No e-commerce** — no cart, checkout, or product catalog
+- **No visitor authentication** — Payload Users are for **admin login only**
+- **No dashboards or heavy custom logic** — keep it simple
+- **No Supabase Auth, Storage, or RLS** — Supabase is only the Postgres host
+
 ---
 
 ## Tech stack
