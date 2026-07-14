@@ -94,7 +94,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="w-full  md:py-[60px]  flex flex-col items-center">
+    <div className="w-full  md:pt-[60px]  flex flex-col items-center">
       {/* ── Main Hero Card ── */}
       <div className="w-full max-w-[1235px] px-4 md:px-0 rounded-[24px] md:rounded-[12px] flex flex-col gap-10 md:gap-14 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
         {/* ── Top Grid Section ── */}

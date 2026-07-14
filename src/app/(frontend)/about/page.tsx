@@ -250,7 +250,7 @@ export default function AboutPage() {
           {/* Right Column: Image */}
           <div className="w-full lg:w-[38%] relative rounded-[24px] overflow-hidden min-h-[400px] lg:min-h-[588px] shadow-sm max-w-[490px] lg:max-w-none self-stretch">
             <Image
-              src="/images/Dignified Man in Blue Suit.png"
+              src="/images/smile.webp"
               alt="Dignified HOF Consultant"
               fill
               className="object-cover object-center"
