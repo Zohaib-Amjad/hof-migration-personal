@@ -36,7 +36,7 @@ export default function HomePage() {
         'Study Permit & Student Visa Applications',
         'Post-Graduation Work Permit (PGWP) Strategy',
       ],
-      image: '/images/Man Working Indoors 1.png',
+      image: '/images/four.webp',
     },
     {
       num: '[03]',
@@ -47,7 +47,7 @@ export default function HomePage() {
         'Parent & Grandparent Super Visas',
         'Family Reunification Appeal Support',
       ],
-      image: '/images/Team Member Image.png',
+      image: '/images/team-working.webp',
     },
     {
       num: '[04]',
@@ -58,7 +58,7 @@ export default function HomePage() {
         'E-2 Investor & L-1 Transfer Visas',
         'USA Student Visa (F-1) Applications',
       ],
-      image: '/images/team-working.webp',
+      image: '/images/tab.webp',
     },
     {
       num: '[05]',
@@ -69,7 +69,7 @@ export default function HomePage() {
         'Schengen Visitor & Business Visa Applications',
         'Passive Income & Digital Nomad Visas',
       ],
-      image: '/images/about-lounge.png',
+      image: '/images/cards.webp',
     },
   ]
 
@@ -190,15 +190,16 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* ── Bottom Image Section ── */}
+        {/* ── Bottom Video Section ── */}
         <div className="w-full relative rounded-[16px] md:rounded-[12px] overflow-hidden aspect-[1232/650] shadow-md">
-          <Image
-            src="/images/hero-man1.png"
-            alt="Your Journey Abroad Starts With The Right Guidance"
-            fill
-            className="object-cover object-center"
-            sizes="(max-width: 1235px) 100vw, 1235px"
-            priority
+          <video
+            src="/images/video/hero-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover object-center"
           />
         </div>
       </div>
@@ -413,10 +414,18 @@ export default function HomePage() {
                       onClick={() => setActiveService(idx)}
                       className="w-full flex items-center gap-4 py-6 text-left outline-none transition-colors duration-200 group cursor-pointer"
                     >
-                      <span className="text-[16px] md:text-[28px] text-[#171A1E] font-medium transition-colors duration-250 group-hover:text-[#8A8A88] shrink-0">
+                      <span
+                        className={`text-[16px] md:text-[28px] font-medium transition-colors duration-250 group-hover:text-[#8A8A88] shrink-0 ${
+                          isActive ? 'text-[#8A8A88]' : 'text-[#171A1E]'
+                        }`}
+                      >
                         {svc.num}
                       </span>
-                      <span className="text-[18px] md:text-[28px] font-medium text-[#171A1E] leading-tight">
+                      <span
+                        className={`text-[18px] md:text-[28px] font-medium leading-tight transition-colors duration-250 group-hover:text-[#8A8A88] ${
+                          isActive ? 'text-[#8A8A88]' : 'text-[#171A1E]'
+                        }`}
+                      >
                         {svc.title}
                       </span>
                     </button>
@@ -630,7 +639,7 @@ export default function HomePage() {
             {/* COLUMN 1 */}
             <div className="flex flex-col gap-6 lg:gap-50">
               {/* Step 1 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -647,7 +656,7 @@ export default function HomePage() {
               </div>
 
               {/* Step 4 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 lg:mt-8">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300 lg:mt-8">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -667,7 +676,7 @@ export default function HomePage() {
             {/* COLUMN 2 */}
             <div className="flex flex-col gap-6 lg:gap-50 lg:pt-25">
               {/* Step 2 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -684,7 +693,7 @@ export default function HomePage() {
               </div>
 
               {/* Step 5 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 lg:mt-8">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300 lg:mt-8">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -704,7 +713,7 @@ export default function HomePage() {
             {/* COLUMN 3 */}
             <div className="flex flex-col gap-6 lg:gap-16 lg:pt-50">
               {/* Step 3 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -1153,13 +1162,17 @@ export default function HomePage() {
                       {faq.q}
                     </span>
                     <span
-                      className={`flex items-center justify-center w-8 h-8 rounded-full shrink-0 transition-all duration-300 font-bold ${
+                      className={`flex items-center justify-center w-7 h-7 rounded-full shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? 'bg-[#E3E8FC] text-[#3F51B5]'
-                          : 'bg-black text-white group-hover:bg-[#1C1F26]'
+                          ? 'bg-[#DDDDFB]'
+                          : 'bg-black group-hover:bg-[#1C1F26]'
                       }`}
                     >
-                      {isOpen ? '−' : '+'}
+                      <img
+                        src={isOpen ? '/images/svg/minus.svg' : '/images/svg/plus.svg'}
+                        alt={isOpen ? 'minus' : 'plus'}
+                        className="w-4 h-4 object-contain"
+                      />
                     </span>
                   </button>
                   <div

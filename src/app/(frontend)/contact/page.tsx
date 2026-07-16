@@ -8,9 +8,35 @@ export default function ContactPage() {
   const FONT_SERIF = { fontFamily: "'Playfair Display', Georgia, serif" }
   const [activeFaq, setActiveFaq] = useState<number | null>(0)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [region, setRegion] = useState('')
+  const [occupation, setOccupation] = useState('')
+  const [education, setEducation] = useState('')
+  const [destination, setDestination] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (
+      !name.trim() ||
+      !email.trim() ||
+      !region.trim() ||
+      !occupation.trim() ||
+      !education ||
+      !destination.trim()
+    ) {
+      alert('Please fill in all required fields.')
+      return
+    }
     alert('Message sent successfully!')
+    setName('')
+    setEmail('')
+    setRegion('')
+    setOccupation('')
+    setEducation('')
+    setDestination('')
+    setMessage('')
   }
 
   return (
@@ -140,6 +166,8 @@ export default function ContactPage() {
               <input
                 type="text"
                 required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
                 className="w-full bg-white border border-[#EDEDEA] rounded-[8px] px-4 py-3 text-[16px] text-[#171A1E] placeholder-[#6B6B69] focus:outline-none focus:border-black transition-colors"
               />
@@ -151,6 +179,8 @@ export default function ContactPage() {
               <input
                 type="email"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter email address"
                 className="w-full bg-white border border-[#EDEDEA] rounded-[8px] px-4 py-3 text-[16px] text-[#171A1E] placeholder-[#6B6B69] focus:outline-none focus:border-black transition-colors"
               />
@@ -164,6 +194,8 @@ export default function ContactPage() {
                 <input
                   type="text"
                   required
+                  value={region}
+                  onChange={(e) => setRegion(e.target.value)}
                   placeholder="Region"
                   className="w-full bg-white border border-[#EDEDEA] rounded-[8px] px-4 py-3 text-[16px] text-[#171A1E] placeholder-[#6B6B69] focus:outline-none focus:border-black transition-colors"
                 />
@@ -175,6 +207,8 @@ export default function ContactPage() {
                 <input
                   type="text"
                   required
+                  value={occupation}
+                  onChange={(e) => setOccupation(e.target.value)}
                   placeholder="Doctor"
                   className="w-full bg-white border border-[#EDEDEA] rounded-[8px] px-4 py-3 text-[16px] text-[#171A1E] placeholder-[#6B6B69] focus:outline-none focus:border-black transition-colors"
                 />
@@ -187,6 +221,8 @@ export default function ContactPage() {
                 <label className="text-[18px] font-medium text-[#03030F]">Education Level*</label>
                 <select
                   required
+                  value={education}
+                  onChange={(e) => setEducation(e.target.value)}
                   className="w-full bg-white border border-[#EDEDEA] rounded-[8px] px-4 py-3 text-[16px] text-[#6B6B69] focus:outline-none focus:border-black transition-colors"
                 >
                   <option value="">Please Select</option>
@@ -204,6 +240,8 @@ export default function ContactPage() {
                 <input
                   type="text"
                   required
+                  value={destination}
+                  onChange={(e) => setDestination(e.target.value)}
                   placeholder="USA"
                   className="w-full bg-white border border-[#EDEDEA] rounded-[8px] px-4 py-3 text-[16px] text-[#171A1E] placeholder-[#6B6B69] focus:outline-none focus:border-black transition-colors"
                 />
@@ -215,6 +253,8 @@ export default function ContactPage() {
               <label className="text-[18px] font-medium text-[#03030F]">Write Your Message</label>
               <textarea
                 rows={3}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="I want to collaborate"
                 className="w-full bg-white border border-[#EDEDEA] rounded-[8px] px-4 py-3 text-[16px] text-[#171A1E] placeholder-[#6B6B69] focus:outline-none focus:border-black transition-colors resize-none"
               />
@@ -303,13 +343,17 @@ export default function ContactPage() {
                       {faq.q}
                     </span>
                     <span
-                      className={`flex items-center justify-center w-8 h-8 rounded-full shrink-0 transition-all duration-300 font-bold ${
+                      className={`flex items-center justify-center w-7 h-7 rounded-full shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? 'bg-[#E3E8FC] text-[#3F51B5]'
-                          : 'bg-black text-white group-hover:bg-[#1C1F26]'
+                          ? 'bg-[#DDDDFB]'
+                          : 'bg-black group-hover:bg-[#1C1F26]'
                       }`}
                     >
-                      {isOpen ? '−' : '+'}
+                      <img
+                        src={isOpen ? '/images/svg/minus.svg' : '/images/svg/plus.svg'}
+                        alt={isOpen ? 'minus' : 'plus'}
+                        className="w-4 h-4 object-contain"
+                      />
                     </span>
                   </button>
                   <div

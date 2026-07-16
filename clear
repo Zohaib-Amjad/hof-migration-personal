@@ -1,0 +1,17 @@
+[33mcommit cfd291019dad9048b0ff7fc96656a96d0b9a5815[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Zohaib Amjad <zohaibamjad@hof-global.com>
+Date:   Tue Jul 14 13:43:20 2026 +0500
+
+    feat: create initial frontend home and about pages with migration service components
+
+[33mcommit 0e3d6401b2b0edfe97f14a2245d596ab910652ee[m
+Author: Zohaib Amjad <zohaibamjad@hof-global.com>
+Date:   Tue Jul 14 13:19:30 2026 +0500
+
+    feat: scaffold initial project structure and CMS configuration with Payload and Next.js
+
+[33mcommit f3259fa7b9f6fcfa0e7f425f83725af2ac207b1f[m
+Author: Muhammad Zohaib <139725030+Zohaib-Amjad@users.noreply.github.com>
+Date:   Tue Jul 14 13:17:09 2026 +0500
+
+    Initial commit

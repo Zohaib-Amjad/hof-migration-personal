@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -18,10 +19,10 @@ const companyLinks = [
 ]
 
 const socialLinks = [
-  { label: 'Twitter', href: 'https://twitter.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Facebook', href: 'https://facebook.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
+  { label: 'Twitter', href: 'https://x.com/HOFmigration' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/68774040/admin/dashboard/' },
+  { label: 'Facebook', href: 'https://www.facebook.com/hofmigration' },
+  { label: 'Instagram', href: 'https://www.instagram.com/hofmigration?igsh=ZTZ0c2ZhcWxkd3Y=' },
 ]
 
 const legalLinks = [
@@ -32,6 +33,40 @@ const legalLinks = [
 
 export function Footer() {
   const FONT_INTER = { fontFamily: "'Inter', sans-serif" }
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [message, setMessage] = useState('')
+  const emailInputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    const savedEmail = localStorage.getItem('subscribed_email')
+    if (savedEmail) {
+      setEmail(savedEmail)
+      setStatus('success')
+      setMessage('You are already subscribed!')
+    }
+  }, [])
+
+  const isValidEmail = (val: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(val)
+  }
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!isValidEmail(email)) {
+      setStatus('error')
+      setMessage('Please enter a valid email address.')
+      if (emailInputRef.current) {
+        emailInputRef.current.focus()
+      }
+      return
+    }
+
+    localStorage.setItem('subscribed_email', email)
+    setStatus('success')
+    setMessage('Thank you for subscribing!')
+  }
 
   return (
     <footer className="w-full " style={FONT_INTER}>
@@ -43,14 +78,32 @@ export function Footer() {
             <h3 className="text-[20px] font-semibold text-[#171A1E] tracking-tight">Newsletter</h3>
 
             {/* Input Pill */}
-            <div className="flex items-center bg-white rounded-full p-1 border border-[#D1CDC8] max-w-[420px] w-full shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+            <form
+              onSubmit={handleSubscribe}
+              noValidate
+              className="flex items-center bg-white rounded-full p-1 border border-[#D1CDC8] max-w-[420px] w-full shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+            >
               <input
+                ref={emailInputRef}
                 type="email"
                 placeholder="Enter your email address"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                  if (status === 'error') {
+                    setStatus('idle')
+                    setMessage('')
+                  }
+                }}
                 className="flex-1 bg-transparent px-4 py-2 text-[16px] text-[#171A1E] placeholder-[#8A8A88] outline-none min-w-0"
               />
-              <button className="group flex items-center gap-2 bg-[#0F1117] hover:bg-[#1C1F26] text-white rounded-full pl-5 pr-1 py-1 transition-all duration-200 shrink-0">
-                <span className="text-[16px] font-medium tracking-wide">Subscribe</span>
+              <button
+                type="submit"
+                className="group flex items-center gap-2 bg-[#0F1117] hover:bg-[#1C1F26] text-white rounded-full pl-5 pr-1 py-1 transition-all duration-200 shrink-0"
+              >
+                <span className="text-[16px] font-medium tracking-wide">
+                  {status === 'success' ? 'Subscribed' : 'Subscribe'}
+                </span>
                 <span className="flex items-center justify-center w-[32px] h-[32px] bg-white rounded-full transition-transform duration-200">
                   <Image
                     src="/images/svg/arrow.svg"
@@ -61,7 +114,17 @@ export function Footer() {
                   />
                 </span>
               </button>
-            </div>
+            </form>
+
+            {message && (
+              <p
+                className={`text-[14px] font-medium mt-1 ${
+                  status === 'success' ? 'text-green-600' : 'text-red-500'
+                }`}
+              >
+                {message}
+              </p>
+            )}
 
             <p className="text-[16px] text-[#6B6B69] max-w-[320px] leading-relaxed">
               Let's transform your vision into results.
@@ -119,7 +182,7 @@ export function Footer() {
               </span>
               <a
                 href="mailto:info@hofmigration.com"
-                className="text-[16px] font-semibold hover:text-[#3A5A8A] transition-colors duration-150"
+                className="text-[16px] font-semibold inline-block transition-transform duration-200 hover:-translate-y-0.5"
               >
                 info@hofmigration.com
               </a>
@@ -130,7 +193,15 @@ export function Footer() {
               <span className="text-[14px] font-medium uppercase tracking-wider text-[#6B6B69]">
                 Visit Us
               </span>
-              <span className="text-[16px] font-semibold">Opal Tower - 1408 Burj Khalifa Blvd</span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=1408,+Opal+Tower,+Burj+Khalifa+Boulevard+,+Dubai,+United+Arab+Emirates"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="1408, Opal Tower, Burj Khalifa Boulevard , Dubai, United Arab Emirates"
+                className="text-[16px] font-semibold inline-block transition-transform duration-200 hover:-translate-y-0.5"
+              >
+                Opal Tower - 1408 Burj Khalifa Blvd
+              </a>
             </div>
 
             {/* Call Us */}
@@ -140,7 +211,7 @@ export function Footer() {
               </span>
               <a
                 href="tel:0457665563"
-                className="text-[16px] font-semibold hover:text-[#3A5A8A] transition-colors duration-150"
+                className="text-[16px] font-semibold inline-block transition-transform duration-200 hover:-translate-y-0.5"
               >
                 04 576 6563
               </a>

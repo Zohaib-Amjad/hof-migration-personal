@@ -85,36 +85,42 @@ export default function AboutPage() {
       role: 'Consultant',
       image: '/images/smilee.webp',
       social: 'x',
+      socialUrl: 'https://x.com/HOFmigration',
     },
     {
       name: 'Jacob Jones',
       role: 'Project Manager',
       image: '/images/sleep.webp',
       social: 'x',
+      socialUrl: 'https://x.com/HOFmigration',
     },
     {
       name: 'Jenny Wilson',
       role: 'Project Coordinator',
       image: '/images/handsome.webp',
       social: 'x',
+      socialUrl: 'https://x.com/HOFmigration',
     },
     {
       name: 'Theresa Webb',
       role: 'Operations Analyst',
       image: '/images/simple.webp',
       social: 'linkedin',
+      socialUrl: 'https://www.linkedin.com/company/68774040/admin/dashboard/',
     },
     {
       name: 'Ronald Richards',
       role: 'Client Success Manager',
       image: '/images/ai.webp',
       social: 'x',
+      socialUrl: 'https://x.com/HOFmigration',
     },
     {
       name: 'Cody Fisher',
       role: 'Financial Strategy Advisor',
       image: '/images/old.webp',
       social: 'linkedin',
+      socialUrl: 'https://www.linkedin.com/company/68774040/admin/dashboard/',
     },
   ]
 
@@ -593,9 +599,12 @@ export default function AboutPage() {
           {/* Grid layout for 6 members */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-14 w-full mt-4">
             {team.map((member, idx) => (
-              <div
+              <a
                 key={idx}
-                className="relative rounded-[12px] overflow-hidden aspect-[5/6] shadow-sm border border-[#E0E0E0]/30 group"
+                href={member.socialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative rounded-[12px] overflow-hidden aspect-[5/6] shadow-sm border border-[#E0E0E0]/30 group block cursor-pointer"
               >
                 <Image
                   src={member.image}
@@ -612,7 +621,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Social Icon */}
-                  <span className="flex items-center justify-center w-8 h-8 bg-white rounded-[12px] cursor-pointer hover:bg-white/90 transition-all">
+                  <span className="flex items-center justify-center w-8 h-8 bg-white rounded-[12px] hover:bg-white/90 transition-all">
                     {member.social === 'x' ? (
                       <img src="/images/svg/x.svg" alt="X" className="w-3.5 h-3.5" />
                     ) : (
@@ -620,7 +629,7 @@ export default function AboutPage() {
                     )}
                   </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
