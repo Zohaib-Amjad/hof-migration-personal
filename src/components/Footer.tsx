@@ -38,15 +38,6 @@ export function Footer() {
   const [message, setMessage] = useState('')
   const emailInputRef = useRef<HTMLInputElement>(null)
 
-  useEffect(() => {
-    const savedEmail = localStorage.getItem('subscribed_email')
-    if (savedEmail) {
-      setEmail(savedEmail)
-      setStatus('success')
-      setMessage('You are already subscribed!')
-    }
-  }, [])
-
   const isValidEmail = (val: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return emailRegex.test(val)
@@ -63,9 +54,15 @@ export function Footer() {
       return
     }
 
-    localStorage.setItem('subscribed_email', email)
     setStatus('success')
     setMessage('Thank you for subscribing!')
+    setEmail('') // Reset input field
+
+    // Auto-hide success message after 4 seconds
+    setTimeout(() => {
+      setStatus('idle')
+      setMessage('')
+    }, 4000)
   }
 
   return (
