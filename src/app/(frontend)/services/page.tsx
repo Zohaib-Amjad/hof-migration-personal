@@ -162,7 +162,7 @@ export default function ServicesPage() {
   return (
     <div className="w-full  flex flex-col items-center">
       {/* ── Section 1: Hero & Approved Visa Image (Introduction banner with the approved visa graphic) ── */}
-      <div className="w-full max-w-[1235px] px-4 md:px-0 py-15 md:py-20 flex flex-col items-center text-center gap-2">
+      <div className="w-full max-w-[1235px] px-4 md:px-0 pb-15 md:py-20 flex flex-col items-center text-center gap-2">
         <span className="text-[11px] md:text-[16px] font-medium text-[#000000] tracking-widest uppercase">
           [Our Services]
         </span>

@@ -96,7 +96,7 @@ export default function HomePage() {
   return (
     <div className="w-full flex flex-col items-center">
       {/* ── Section 1: Hero (Introduction card with bold headlines, success ratio metric, and background video) ── */}
-      <div className="w-full max-w-[1235px] px-4 py-10 md:py-20 rounded-[24px] md:rounded-[12px] flex flex-col gap-10 md:gap-14 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+      <div className="w-full max-w-[1235px] px-4 pb-10 md:py-20 rounded-[24px] md:rounded-[12px] flex flex-col gap-10 md:gap-14 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
         {/* ── Top Grid Section ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Heading & CTA */}

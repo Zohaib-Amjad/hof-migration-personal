@@ -259,7 +259,7 @@ export default function DestinationsPage() {
   return (
     <div className="w-full flex flex-col items-center">
       {/* ── Section 1: Hero (Introduction banner highlighting immigration opportunities in destinations like the USA) ── */}
-      <div className="w-full relative min-h-[100vh] md:min-h-[100vh] flex items-center justify-start overflow-hidden mt-[-200px] md:mt-[-90px] ">
+      <div className="w-full relative min-h-[100vh] md:min-h-[100vh] flex items-center justify-start overflow-hidden mt-[-250px] md:mt-[-90px] ">
         <Image
           src="/images/hand.webp"
           alt="Study, Work & Settle in the United States"
