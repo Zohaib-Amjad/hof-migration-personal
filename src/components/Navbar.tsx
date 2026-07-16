@@ -46,7 +46,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center shrink-0">
             <div className="relative h-[38px] w-[185px]">
               <Image
-                src="/images/hof-logo.png"
+                src="/images/hof-logo.webp"
                 alt="HOF Migration"
                 fill
                 className="object-contain object-left"
