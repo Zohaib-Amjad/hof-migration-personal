@@ -805,13 +805,17 @@ export default function DestinationsPage() {
                       {faq.q}
                     </span>
                     <span
-                      className={`flex items-center justify-center w-8 h-8 rounded-full shrink-0 transition-all duration-300 font-bold ${
+                      className={`flex items-center justify-center w-7 h-7 rounded-full shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? 'bg-[#E3E8FC] text-[#3F51B5]'
-                          : 'bg-black text-white group-hover:bg-[#1C1F26]'
+                          ? 'bg-[#DDDDFB]'
+                          : 'bg-black group-hover:bg-[#1C1F26]'
                       }`}
                     >
-                      {isOpen ? '−' : '+'}
+                      <img
+                        src={isOpen ? '/images/svg/minus.svg' : '/images/svg/plus.svg'}
+                        alt={isOpen ? 'minus' : 'plus'}
+                        className="w-4 h-4 object-contain"
+                      />
                     </span>
                   </button>
                   <div

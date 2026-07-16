@@ -40,7 +40,7 @@ export function Navbar() {
           className={`w-full max-w-[1235px] flex items-center justify-between
                      bg-white rounded-[1000px]
                      px-5 py-[10px] transition-all duration-300
-                     ${isScrolled ? 'shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-[#E0E0E0]/30' : ''}`}
+                     ${isScrolled ? 'shadow-[0_12px_40px_rgba(0,0,0,0.12)] border border-[#E0E0E0]/40' : ''}`}
         >
           {/* ── Logo ── */}
           <Link href="/" className="flex items-center shrink-0">
