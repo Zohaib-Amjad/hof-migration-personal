@@ -176,7 +176,7 @@ export default function VisaTypesPage() {
 
   return (
     <div className="w-full flex flex-col items-center">
-      {/* ── Section 1: Hero ── */}
+      {/* ── Section 1: Hero (Introduction banner detailing visa services and free eligibility check) ── */}
       <div className="w-full relative min-h-[100vh] md:min-h-[100vh] flex items-center justify-start overflow-hidden mt-[-200px] md:mt-[-90px] ">
         <Image
           src="/images/visa.webp"
@@ -216,8 +216,8 @@ export default function VisaTypesPage() {
         </div>
       </div>
 
-      {/* ── Section 2: Explore Visa Solutions ── */}
-      <div className="w-full max-w-[1235px] mt-24 md:mt-32 px-4 md:px-0 flex flex-col items-center gap-12">
+      {/* ── Section 2: Explore Visa Solutions (Grid showing details of various visa subclasses, e.g. student, skilled work, investment) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 px-4 md:px-0 flex flex-col items-center gap-12">
         <div className="flex flex-col items-center text-center gap-3">
           <h2 className="text-[28px] sm:text-[36px] md:text-[64px] font-medium text-[#03030F] leading-tight md:leading-[80px] tracking-tight">
             Explore Visa Solutions <br />
@@ -281,8 +281,8 @@ export default function VisaTypesPage() {
         </div>
       </div>
 
-      {/* ── Section 3: Immigration Pathways Grid ── */}
-      <div className="w-full bg-[#ffffff] py-24 md:py-32 flex flex-col items-center ">
+      {/* ── Section 3: Immigration Pathways Grid (Visual pathway card highlights of destinations, student visas, and permanent residency) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex flex-col items-center ">
         <div className="w-full max-w-[1235px] px-6 md:px-0 flex flex-col gap-10">
           <div className="w-full flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="flex flex-col items-start gap-1">
@@ -315,7 +315,7 @@ export default function VisaTypesPage() {
             {pathways.map((svc) => (
               <div
                 key={svc.id}
-                className="group bg-[#F9F9F8] rounded-[12px] p-6.5 flex flex-col items-start gap-6"
+                className="group bg-[#F9F9F8] rounded-[12px] p-6.5 flex flex-col items-start gap-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md"
               >
                 <div className="flex items-center justify-center w-10 h-10">{svc.icon}</div>
                 <div className="flex flex-col gap-2">
@@ -351,8 +351,8 @@ export default function VisaTypesPage() {
         </div>
       </div>
 
-      {/* ── Section 4: Testimonials ── */}
-      <div className="w-full bg-[#ffffff] py-20 md:py-28 flex justify-center">
+      {/* ── Section 4: Testimonials (Carousel of client quotes sharing their feedback and experiences with our consultants) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex justify-center">
         <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col gap-12 ">
           <h2 className="text-[32px] sm:text-[40px] md:text-[64px] font-medium text-[#171A1E] leading-[1.1] tracking-tight text-center">
             Proven by What <br />
@@ -364,12 +364,12 @@ export default function VisaTypesPage() {
 
           {/* Carousel Slider */}
           <div
-            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-none pb-4 w-full"
+            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-none pt-4 pb-4 w-full"
             style={{ scrollSnapType: 'x mandatory' }}
           >
             {/* Card 1 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -397,7 +397,7 @@ export default function VisaTypesPage() {
 
             {/* Card 2 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -425,7 +425,7 @@ export default function VisaTypesPage() {
 
             {/* Card 3 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -449,7 +449,7 @@ export default function VisaTypesPage() {
 
             {/* Card 4 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -472,7 +472,7 @@ export default function VisaTypesPage() {
 
             {/* Card 5 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -496,8 +496,8 @@ export default function VisaTypesPage() {
         </div>
       </div>
 
-      {/* ── Section 5: Friendly Asked Questions ── */}
-      <div className="w-full bg-[#F9F9F8] py-20 md:py-20 flex justify-center ">
+      {/* ── Section 5: Friendly Asked Questions (Accordion answers for timeline and approach enquiries) ── */}
+      <div className="w-full bg-[#F9F9F8] py-15 md:py-30 flex justify-center ">
         <div className="w-full max-w-[1235px] px-4 md:px-0 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
           {/* Left Column: Title & CTA card */}
           <div className="lg:col-span-5 flex flex-col justify-between gap-8 lg:gap-0 py-0">
@@ -589,9 +589,8 @@ export default function VisaTypesPage() {
         </div>
       </div>
 
-      {/* ── Section 6: CTA Banner ── */}
-      {/* ── Section 6: CTA Banner (Work with Experts) ── */}
-      <div className="w-full max-w-[1235px] px-4 py-12 md:py-[100px] md:px-[30px] bg-[#ffffff]">
+      {/* ── Section 6: Work with Experts to Build Your Grow (CTA banner with quick checklist and link to contact form) ── */}
+      <div className="w-full max-w-[1235px] px-4 py-15 md:py-30 md:px-[30px] bg-[#ffffff]">
         <div className="bg-[#000000] rounded-[12px] p-3 text-white overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[380px]">
           {/* Left Column: CTA Texts */}
           <div className="lg:col-span-7 py-8 px-1 sm:p-8 md:p-12 lg:p-5 lg:py-15 flex flex-col justify-between items-start gap-8">

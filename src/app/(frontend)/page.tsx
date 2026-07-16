@@ -94,9 +94,9 @@ export default function HomePage() {
   }
 
   return (
-    <div className="w-full  md:pt-[60px]  flex flex-col items-center">
-      {/* ── Main Hero Card ── */}
-      <div className="w-full max-w-[1235px] px-4 md:px-0 rounded-[24px] md:rounded-[12px] flex flex-col gap-10 md:gap-14 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+    <div className="w-full flex flex-col items-center">
+      {/* ── Section 1: Hero (Introduction card with bold headlines, success ratio metric, and background video) ── */}
+      <div className="w-full max-w-[1235px] px-4 py-10 md:py-20 rounded-[24px] md:rounded-[12px] flex flex-col gap-10 md:gap-14 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
         {/* ── Top Grid Section ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Heading & CTA */}
@@ -204,8 +204,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 2: Certified Expertise & Personalised Care ── */}
-      <div className="w-full max-w-[1235px] mt-16 md:mt-30 md:my-[60px] flex flex-col gap-10 md:gap-14 px-4 md:px-0">
+      {/* ── Section 2: Certified Expertise & Personalised Care (Summary of HOF Migration history, licensed experts, and success metric) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 flex flex-col gap-10 md:gap-14 px-4 md:px-0">
         {/* Headline */}
         <h2 className="text-[28px] sm:text-[36px] md:text-[36px] font-inter font-medium text-[#171A1E] leading-tight md:leading-[48px] tracking-normal max-w-[800px]">
           Since 2010, we've guided thousands of families to build their futures abroad combining{' '}
@@ -297,8 +297,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 3: Client Satisfaction & Metrics ── */}
-      <div className="w-full max-w-[1235px] md:my-[60px] flex flex-col gap-12 px-4 md:px-0">
+      {/* ── Section 3: Client Satisfaction & Metrics (Grid detailing successful visa applications, satisfaction rate, and active destinations) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 flex flex-col gap-12 px-4 md:px-0">
         {/* Headline & Sub-headline */}
         <div className="flex flex-col gap-4 text-center max-w-[750px] mx-auto">
           <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-medium text-[#171A1E] leading-[48px] tracking-normal">
@@ -318,7 +318,7 @@ export default function HomePage() {
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           {/* ── Card 1: Visa Applications ── */}
-          <div className="bg-white border border-[#E0E0E0]/30 rounded-[20px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div className="bg-white border border-[#E0E0E0]/30 rounded-[20px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
             {/* 🔁 ICON SLOT — replace src with your own SVG file path, e.g. /images/icons/visa.svg */}
             <div className="flex items-center justify-center w-14 h-14 bg-[#EDEDEA] rounded-full mb-6">
               <img src="/images/svg/folder.svg" alt="Visa icon" className="w-6 h-6" />
@@ -332,7 +332,7 @@ export default function HomePage() {
           </div>
 
           {/* ── Card 2: Client Satisfaction ── */}
-          <div className="bg-white border border-[#E0E0E0]/30 rounded-[20px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div className="bg-white border border-[#E0E0E0]/30 rounded-[20px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
             {/* 🔁 ICON SLOT — replace src with your own SVG file path, e.g. /images/icons/satisfaction.svg */}
             <div className="flex items-center justify-center w-14 h-14 bg-[#EDEDEA] rounded-full mb-6">
               <img src="/images/svg/people.svg" alt="Satisfaction icon" className="w-6 h-6" />
@@ -346,7 +346,7 @@ export default function HomePage() {
           </div>
 
           {/* ── Card 3: Destination Countries ── */}
-          <div className="bg-white border border-[#E0E0E0]/30 rounded-[20px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div className="bg-white border border-[#E0E0E0]/30 rounded-[20px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
             {/* 🔁 ICON SLOT — replace src with your own SVG file path, e.g. /images/icons/countries.svg */}
             <div className="flex items-center justify-center w-14 h-14 bg-[#EDEDEA] rounded-full mb-6">
               <img src="/images/svg/star.svg" alt="Countries icon" className="w-6 h-6" />
@@ -360,7 +360,7 @@ export default function HomePage() {
           </div>
 
           {/* ── Card 4: Years of Experience ── */}
-          <div className="bg-white border border-[#E0E0E0]/30 rounded-[20px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div className="bg-white border border-[#E0E0E0]/30 rounded-[20px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
             {/* 🔁 ICON SLOT — replace src with your own SVG file path, e.g. /images/icons/experience.svg */}
             <div className="flex items-center justify-center w-14 h-14 bg-[#EDEDEA] rounded-full mb-6">
               <img src="/images/svg/bulb.svg" alt="Experience icon" className="w-6 h-6" />
@@ -375,8 +375,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 4: Immigration & Education Solutions ── */}
-      <div className="w-full bg-[#ffffff] py-20 md:py-28 flex justify-center mt-24 md:mt-32">
+      {/* ── Section 4: Immigration & Education Solutions (Accordion grid detailing solutions like student visas, family sponsorship, and EB-2 NIW) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex justify-center">
         <div className="w-full max-w-[1235px] px-4 md:px-0">
           {/* Header Grid */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
@@ -491,8 +491,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 5: The Trust Behind Our Partnership ── */}
-      <div className="w-full bg-[#F9F9F8] py-10 md:py-28 flex justify-center mt-24 md:mt-32">
+      {/* ── Section 5: The Trust Behind Our Partnership (Tabs detailing collaboration, compliance, and custom solutions with client images) ── */}
+      <div className="w-full bg-[#F9F9F8] py-15 md:py-30 flex justify-center">
         <div className="w-full max-w-[1235px] px-4 md:px-0 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-stretch">
           {/* Left Column: Image with overlay text */}
           <div className="lg:col-span-5 w-full relative aspect-[4/4.5] rounded-[24px] overflow-hidden shadow-sm group">
@@ -623,8 +623,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 6: Your Immigration Journey Made Simple ── */}
-      <div className="w-full bg-[#ffffff] py-20 md:py-28 flex justify-center mt-24 md:mt-32">
+      {/* ── Section 6: Your Immigration Journey Made Simple (Step-by-step roadmap outlining eligibility assessment, documentation, and strategies) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex justify-center">
         <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col gap-12 items-center">
           <h2 className="text-[32px] sm:text-[40px] md:text-[64px] font-semibold text-[#171A1E] leading-tight text-center tracking-tight max-w-[800px]">
             Your Immigration <br />
@@ -639,7 +639,7 @@ export default function HomePage() {
             {/* COLUMN 1 */}
             <div className="flex flex-col gap-6 lg:gap-50">
               {/* Step 1 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -656,7 +656,7 @@ export default function HomePage() {
               </div>
 
               {/* Step 4 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300 lg:mt-8">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md lg:mt-8">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -676,7 +676,7 @@ export default function HomePage() {
             {/* COLUMN 2 */}
             <div className="flex flex-col gap-6 lg:gap-50 lg:pt-25">
               {/* Step 2 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -693,7 +693,7 @@ export default function HomePage() {
               </div>
 
               {/* Step 5 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300 lg:mt-8">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md lg:mt-8">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -713,7 +713,7 @@ export default function HomePage() {
             {/* COLUMN 3 */}
             <div className="flex flex-col gap-6 lg:gap-16 lg:pt-50">
               {/* Step 3 */}
-              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 hover:scale-[1.03] transition-all duration-300">
+              <div className="bg-[#F9F9F8] rounded-[12px] py-8 px-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md">
                 <div
                   className="flex items-center justify-center w-12 h-12 bg-white
                 border border-[#D9D9DB] rounded-full mb-12"
@@ -733,8 +733,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 7: How We Helped Clients Achieve Their Future (Success Stories Carousel) ── */}
-      <div className="w-full bg-[#F9F9F8] py-20 md:py-28 flex justify-center mt-24 md:mt-32">
+      {/* ── Section 7: How We Helped Clients Achieve Their Future (Carousel slider displaying visual case cards of approved visas) ── */}
+      <div className="w-full bg-[#F9F9F8] py-15 md:py-30 flex justify-center">
         <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col gap-12">
           {/* Header Row */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 w-full">
@@ -766,12 +766,12 @@ export default function HomePage() {
           {/* Carousel Slider */}
           <div
             ref={carouselRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-none pb-4 w-full"
+            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-none pt-4 pb-4 w-full"
             style={{ scrollSnapType: 'x mandatory' }}
           >
             {/* Card 1 */}
             <div
-              className="w-[85vw] sm:w-[360px] md:w-[380px] lg:w-[332px] aspect-[3.8/5] sm:aspect-[4/5] rounded-[12px] overflow-hidden relative shadow-sm shrink-0 bg-[#EDEDEA] flex flex-col justify-end p-4 border border-[#E0E0E0]/20"
+              className="w-[85vw] sm:w-[360px] md:w-[380px] lg:w-[332px] aspect-[3.8/5] sm:aspect-[4/5] rounded-[12px] overflow-hidden relative shadow-sm shrink-0 bg-[#EDEDEA] flex flex-col justify-end p-4 border border-[#E0E0E0]/20 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md"
               style={{ scrollSnapAlign: 'start' }}
             >
               <Image
@@ -804,7 +804,7 @@ export default function HomePage() {
 
             {/* Card 2 */}
             <div
-              className="w-[85vw] sm:w-[360px] md:w-[380px] lg:w-[332px] aspect-[3.8/5] sm:aspect-[4/5] rounded-[12px] overflow-hidden relative shadow-sm shrink-0 bg-[#EDEDEA] flex flex-col justify-end p-4 border border-[#E0E0E0]/20"
+              className="w-[85vw] sm:w-[360px] md:w-[380px] lg:w-[332px] aspect-[3.8/5] sm:aspect-[4/5] rounded-[12px] overflow-hidden relative shadow-sm shrink-0 bg-[#EDEDEA] flex flex-col justify-end p-4 border border-[#E0E0E0]/20 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md"
               style={{ scrollSnapAlign: 'start' }}
             >
               <Image
@@ -828,7 +828,7 @@ export default function HomePage() {
 
             {/* Card 3 */}
             <div
-              className="w-[85vw] sm:w-[360px] md:w-[380px] lg:w-[332px] aspect-[3.8/5] sm:aspect-[4/5] rounded-[12px] overflow-hidden relative shadow-sm shrink-0 bg-[#EDEDEA] flex flex-col justify-end p-4 border border-[#E0E0E0]/20"
+              className="w-[85vw] sm:w-[360px] md:w-[380px] lg:w-[332px] aspect-[3.8/5] sm:aspect-[4/5] rounded-[12px] overflow-hidden relative shadow-sm shrink-0 bg-[#EDEDEA] flex flex-col justify-end p-4 border border-[#E0E0E0]/20 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md"
               style={{ scrollSnapAlign: 'start' }}
             >
               <Image
@@ -852,7 +852,7 @@ export default function HomePage() {
 
             {/* Card 4 */}
             <div
-              className="w-[85vw] sm:w-[360px] md:w-[380px] lg:w-[332px] aspect-[3.8/5] sm:aspect-[4/5] rounded-[12px] overflow-hidden relative shadow-sm shrink-0 bg-[#EDEDEA] flex flex-col justify-end p-4 border border-[#E0E0E0]/20"
+              className="w-[85vw] sm:w-[360px] md:w-[380px] lg:w-[332px] aspect-[3.8/5] sm:aspect-[4/5] rounded-[12px] overflow-hidden relative shadow-sm shrink-0 bg-[#EDEDEA] flex flex-col justify-end p-4 border border-[#E0E0E0]/20 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md"
               style={{ scrollSnapAlign: 'start' }}
             >
               <Image
@@ -877,8 +877,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 8: Proven by What Our Clients Say (Testimonials) ── */}
-      <div className="w-full bg-[#ffffff] py-20 md:py-28 flex justify-center mt-24 md:mt-32">
+      {/* ── Section 8: Proven by What Our Clients Say (Testimonials sharing feedback from Cameron Williamson, Theresa Webb, etc.) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex justify-center ">
         <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col gap-12 ">
           <h2 className="text-[32px] sm:text-[40px] md:text-[64px] font-medium text-[#171A1E] leading-[1.1] tracking-tight text-center">
             Proven by What <br />
@@ -891,12 +891,12 @@ export default function HomePage() {
           {/* Carousel Slider */}
           <div
             ref={testimonialsRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-none pb-4 w-full"
+            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-none pt-4 pb-4 w-full"
             style={{ scrollSnapType: 'x mandatory' }}
           >
             {/* Card 1 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -924,7 +924,7 @@ export default function HomePage() {
 
             {/* Card 2 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -952,7 +952,7 @@ export default function HomePage() {
 
             {/* Card 3 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -976,7 +976,7 @@ export default function HomePage() {
 
             {/* Card 4 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -999,7 +999,7 @@ export default function HomePage() {
 
             {/* Card 5 */}
             <div
-              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px]"
+              className="flex flex-col gap-4 shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[260px] transition-all duration-300 hover:-translate-y-1.5"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="bg-[#F9F9F8] rounded-[12px] py-6 px-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] flex flex-col gap-6">
@@ -1023,8 +1023,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 9: Complex Immigration Challenges ── */}
-      <div className="w-full bg-[#ffffff] py-20 md:py-28 flex justify-center ">
+      {/* ── Section 9: Complex Immigration Challenges (Office operational hours schedules and call links) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex justify-center ">
         <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col gap-12 items-center">
           <h2 className="text-[32px] sm:text-[40px] md:text-[64px] font-medium text-[#171A1E] leading-tight md:leading-[80px] text-center tracking-tight">
             Complex{' '}
@@ -1098,8 +1098,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 10: Friendly Asked Questions ── */}
-      <div className="w-full bg-[#F9F9F8] py-20 md:py-20 flex justify-center ">
+      {/* ── Section 10: Friendly Asked Questions (Accordion answers for timeline and approach queries) ── */}
+      <div className="w-full bg-[#F9F9F8] py-15 md:py-30 flex justify-center ">
         <div className="w-full max-w-[1235px] px-4 md:px-0 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
           {/* Left Column: Title & CTA card */}
           <div className="lg:col-span-5 flex flex-col justify-between gap-8 lg:gap-0 py-0">
@@ -1191,8 +1191,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 11: Immigration Insights That Drive Success ── */}
-      <div className="w-full bg-[#F9F9F8] py-20 md:py-28 flex justify-center ">
+      {/* ── Section 11: Immigration Insights That Drive Success (Grid showcasing strategic growth plan resources and explain series guides) ── */}
+      <div className="w-full bg-[#F9F9F8] py-15 md:py-30 flex justify-center ">
         <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col gap-12">
           {/* Header Row */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 w-full">
@@ -1287,8 +1287,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── Section 12: Work with Experts to Build Your Grow (CTA Banner) ── */}
-      <div className="w-full max-w-[1235px] px-4 py-12 md:py-[100px] md:px-[30px] bg-[#ffffff]">
+      {/* ── Section 12: Work with Experts to Build Your Grow (CTA banner with quick checklist and link to contact form) ── */}
+      <div className="w-full max-w-[1235px] px-4 py-15 md:py-30 md:px-[30px] bg-[#ffffff]">
         <div className="bg-[#000000] rounded-[12px] p-3 text-white overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[380px]">
           {/* Left Column: CTA Texts */}
           <div className="lg:col-span-7 py-8 px-1 sm:p-8 md:p-12 lg:p-5 lg:py-15 flex flex-col justify-between items-start gap-8">
@@ -1316,7 +1316,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-4 mt-6 text-[14px] md:text-[16px] text-white w-full">
               <div className="flex items-start gap-3">
                 <img
-                  src="images/svg/circle-with-tick.svg"
+                  src="/images/svg/circle-with-tick.svg"
                   className="w-[14px] h-[14px] mt-1 shrink-0"
                   alt=""
                 />
@@ -1324,7 +1324,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-start gap-3">
                 <img
-                  src="images/svg/circle-with-tick.svg"
+                  src="/images/svg/circle-with-tick.svg"
                   className="w-[14px] h-[14px] mt-1 shrink-0"
                   alt=""
                 />
@@ -1332,7 +1332,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-start gap-3">
                 <img
-                  src="images/svg/circle-with-tick.svg"
+                  src="/images/svg/circle-with-tick.svg"
                   className="w-[14px] h-[14px] mt-1 shrink-0"
                   alt=""
                 />
