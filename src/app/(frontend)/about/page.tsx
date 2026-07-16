@@ -127,7 +127,7 @@ export default function AboutPage() {
   return (
     <div className="w-full  flex flex-col items-center">
       {/* ── Section 1: Hero (Introduction banner with title and background image) ── */}
-      <div className="w-full relative min-h-[100vh] md:min-h-[100vh] flex items-center justify-start overflow-hidden mt-[-200px] md:mt-[-90px] ">
+      <div className="w-full relative min-h-[80vh] md:min-h-[100vh] flex items-center justify-start overflow-hidden mt-[-200px] md:mt-[-90px] ">
         <Image
           src="/images/cards.webp"
           alt="Trusted Partner for Global Immigration Success"
