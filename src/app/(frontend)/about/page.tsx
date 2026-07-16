@@ -126,7 +126,7 @@ export default function AboutPage() {
 
   return (
     <div className="w-full  flex flex-col items-center">
-      {/* ── Section 1: Hero ── */}
+      {/* ── Section 1: Hero (Introduction banner with title and background image) ── */}
       <div className="w-full relative min-h-[100vh] md:min-h-[100vh] flex items-center justify-start overflow-hidden mt-[-200px] md:mt-[-90px] ">
         <Image
           src="/images/cards.webp"
@@ -149,8 +149,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* ── Section 2: Recognized Logos ── */}
-      <div className="w-full max-w-[1235px] my-16 md:my-24 flex flex-col items-center gap-8 px-4 md:px-0">
+      {/* ── Section 2: Recognized Logos (List of accreditation and trust icons like CICC and MARA) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-20 flex flex-col items-center gap-8 px-4 md:px-0">
         <h2 className="text-[20px] md:text-[20px] font-medium text-[#03030F] text-center tracking-tight">
           Trusted & Recognized By
         </h2>
@@ -175,8 +175,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* ── Section 3: Guiding Ambitions ── */}
-      <div className="w-full max-w-[1235px] my-20 px-4 md:px-0 flex flex-col gap-10">
+      {/* ── Section 3: Guiding Ambitions (Detailed introduction of HOF Migration with mission features cards) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 px-4 md:px-0 flex flex-col gap-10">
         {/* Header Row */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 w-full">
           <div className="flex flex-col items-start">
@@ -239,7 +239,7 @@ export default function AboutPage() {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#ffffff] border border-[#E0E0E0]/30 rounded-[12px] px-5 py-6 flex flex-col items-start gap-4 shadow-[0_2px_12px_rgba(0,0,0,0.01)]"
+                  className="bg-[#ffffff] border border-[#E0E0E0]/30 rounded-[12px] px-5 py-6 flex flex-col items-start gap-4 shadow-[0_2px_12px_rgba(0,0,0,0.01)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md"
                 >
                   <div className="flex items-center justify-center w-15 h-15 bg-[#F3F3F3] rounded-full">
                     {item.icon}
@@ -266,8 +266,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* ── Section 4: Our Story ── */}
-      <div className="w-full max-w-[1235px] my-20 px-4 md:px-0 flex flex-col items-center gap-8">
+      {/* ── Section 4: Our Story (Narrative history and overview of HOF Migration values with team meeting photo) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 px-4 md:px-0 flex flex-col items-center gap-8">
         <div className="flex flex-col items-center text-center gap-3">
           <span className="text-[11px] md:text-[16px] font-medium text-[#000000] tracking-widest uppercase">
             OUR STORY
@@ -321,8 +321,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* ── Section 5: Our Mission & Vision ── */}
-      <div className="w-full max-w-[1235px] my-20 px-4 md:px-0 flex flex-col gap-20 md:gap-24">
+      {/* ── Section 5: Our Mission & Vision (Strategic vision details, mission lists, and team focus display) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 px-4 md:px-0 flex flex-col gap-20 md:gap-24">
         {/* Mission Row */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-10 md:gap-16">
           {/* Left Text */}
@@ -444,8 +444,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* ── Section 6: Why Clients Choose HOF ── */}
-      <div className="w-full max-w-[1235px] my-16 md:my-20 px-4 md:px-0 flex flex-col lg:flex-row justify-between items-start gap-12">
+      {/* ── Section 6: Why Clients Choose HOF (Interactive accordions detailing custom strategies and professional licensure) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 px-4 md:px-0 flex flex-col lg:flex-row justify-between items-start gap-12">
         {/* Left Column: Heading & Accordions */}
         <div className="w-full lg:w-[50%] flex flex-col">
           <span className="text-[11px] md:text-[16px] font-medium text-[#000000] tracking-normal ">
@@ -516,8 +516,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* ── Section 7: Step-by-Step to Business Growth ── */}
-      <div className="w-full max-w-[1235px] mt-24 md:my-20 px-4 md:px-0 flex flex-col lg:flex-row justify-between items-stretch gap-12">
+      {/* ── Section 7: Step-by-Step to Business Growth (A timeline mapping out our strategy from goals consultation to execution) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 px-4 md:px-0 flex flex-col lg:flex-row justify-between items-stretch gap-12">
         {/* Left Column */}
         <div className="w-full lg:w-[40%] flex flex-col items-start justify-start">
           <span className="text-[11px] md:text-[16px] font-medium text-[#000000] tracking-normal">
@@ -562,7 +562,7 @@ export default function AboutPage() {
               </div>
 
               {/* Card */}
-              <div className="flex-1 bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 md:p-8 flex items-start gap-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+              <div className="flex-1 bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 md:p-8 flex items-start gap-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
                 <div className="flex flex-col gap-1.5">
                   <div className="flex items-center justify-center w-12 h-12 bg-[#EAEAFF] rounded-full shrink-0">
                     {step.icon}
@@ -580,8 +580,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* ── Section 8: Meet the Team ── */}
-      <div className="w-full bg-[#ffffff] py-24 md:py-20 flex flex-col items-center">
+      {/* ── Section 8: Meet the Team (Grid of profiles of key consultants, coordinators, and directors) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex flex-col items-center">
         <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col gap-12">
           <div className="flex flex-col items-center text-center gap-3">
             <span className="text-[11px] md:text-[16px] font-medium text-[#000000] tracking-widest uppercase">
@@ -635,8 +635,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* ── Section 9: CTA Banner (Work with Experts) ── */}
-      <div className="w-full max-w-[1235px] px-4 py-12 md:py-[100px] md:px-[30px] bg-[#ffffff]">
+      {/* ── Section 9: Work with Experts to Build Your Grow (Final CTA banner with links to get started and a feature list) ── */}
+      <div className="w-full max-w-[1235px] px-4 py-15 md:py-30 md:px-[30px] bg-[#ffffff]">
         <div className="bg-[#000000] rounded-[12px] p-3 text-white overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[380px]">
           {/* Left Column: CTA Texts */}
           <div className="lg:col-span-7 py-8 px-1 sm:p-8 md:p-12 lg:p-5 lg:py-15 flex flex-col justify-between items-start gap-8">
@@ -663,15 +663,27 @@ export default function AboutPage() {
             {/* Checklist at the bottom */}
             <div className="flex flex-col gap-4 mt-6 text-[14px] md:text-[16px] text-white w-full">
               <div className="flex items-start gap-3">
-                <img src="/images/svg/circle-with-tick.svg" className="w-[14px] h-[14px] mt-1 shrink-0" alt="" />
+                <img
+                  src="/images/svg/circle-with-tick.svg"
+                  className="w-[14px] h-[14px] mt-1 shrink-0"
+                  alt=""
+                />
                 <span>Book a Free Consultation — No Commitment Required</span>
               </div>
               <div className="flex items-start gap-3">
-                <img src="/images/svg/circle-with-tick.svg" className="w-[14px] h-[14px] mt-1 shrink-0" alt="" />
+                <img
+                  src="/images/svg/circle-with-tick.svg"
+                  className="w-[14px] h-[14px] mt-1 shrink-0"
+                  alt=""
+                />
                 <span>Discover Your Eligible Visa Pathways</span>
               </div>
               <div className="flex items-start gap-3">
-                <img src="/images/svg/circle-with-tick.svg" className="w-[14px] h-[14px] mt-1 shrink-0" alt="" />
+                <img
+                  src="/images/svg/circle-with-tick.svg"
+                  className="w-[14px] h-[14px] mt-1 shrink-0"
+                  alt=""
+                />
                 <span>Discover Your Eligible Visa Pathways</span>
               </div>
             </div>

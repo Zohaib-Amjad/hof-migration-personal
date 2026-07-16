@@ -40,9 +40,9 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="w-full pt-12 md:pt-[110px] flex flex-col items-center">
-      {/* ── Section 1: Office Location ── */}
-      <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col lg:flex-row justify-between items-center gap-12">
+    <div className="w-full flex flex-col items-center">
+      {/* ── Section 1: Office Location (Office details showing office location, address, map link and phone number) ── */}
+      <div className="w-full max-w-[1235px] px-4 md:px-0 py-15 md:py-30 flex flex-col lg:flex-row justify-between items-center gap-12">
         {/* Left Info Column */}
         <div className="w-full lg:w-[48%] flex flex-col items-start gap-8 md:gap-[60px]">
           <div className="flex flex-col items-start gap-3">
@@ -87,8 +87,8 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* ── Section 2: Drop Us a Message ── */}
-      <div className="w-full bg-[#ffffff] py-20 md:py-28 flex justify-center mt-24 md:mt-32">
+      {/* ── Section 2: Drop Us a Message (Contact form and contact details like phone, email, and social profiles) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex justify-center">
         <div className="w-full max-w-[1235px] px-4 md:px-0 flex flex-col lg:flex-row justify-between items-start gap-12">
           {/* Left Side: Text and Contact Bullets */}
           <div className="w-full lg:w-[44%] flex flex-col justify-between self-stretch lg:min-h-[480px]">
@@ -279,8 +279,8 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* ── Section 3: Friendly Asked Questions ── */}
-      <div className="w-full bg-[#F9F9F8] py-20 md:py-20 flex justify-center ">
+      {/* ── Section 3: Friendly Asked Questions (Accordion questions explaining timelines, processing speed, and startup relocation) ── */}
+      <div className="w-full bg-[#F9F9F8] py-15 md:py-30 flex justify-center ">
         <div className="w-full max-w-[1235px] px-4 md:px-0 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
           {/* Left Column: Title & CTA card */}
           <div className="lg:col-span-5 flex flex-col justify-between gap-8 lg:gap-0 py-0">
@@ -372,8 +372,8 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* ── Section 4: CTA Banner (Work with Experts) ── */}
-      <div className="w-full max-w-[1235px] px-4 py-12 md:py-[100px] md:px-[30px] bg-[#ffffff]">
+      {/* ── Section 4: Work with Experts to Build Your Grow (Final CTA banner with link to contact page and eligibility features) ── */}
+      <div className="w-full max-w-[1235px] px-4 py-15 md:py-30 md:px-[30px] bg-[#ffffff]">
         <div className="bg-[#000000] rounded-[12px] p-3 text-white overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[380px]">
           {/* Left Column: CTA Texts */}
           <div className="lg:col-span-7 py-8 px-1 sm:p-8 md:p-12 lg:p-5 lg:py-15 flex flex-col justify-between items-start gap-8">

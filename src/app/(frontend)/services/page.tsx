@@ -160,9 +160,9 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className="w-full pt-[70px] md:pt-[70px] flex flex-col items-center">
-      {/* ── Section 1: Hero & Approved Visa Image ── */}
-      <div className="w-full max-w-[1235px] px-4 md:px-0 mt-[-100px] flex flex-col items-center text-center gap-2">
+    <div className="w-full  flex flex-col items-center">
+      {/* ── Section 1: Hero & Approved Visa Image (Introduction banner with the approved visa graphic) ── */}
+      <div className="w-full max-w-[1235px] px-4 md:px-0 py-15 md:py-20 flex flex-col items-center text-center gap-2">
         <span className="text-[11px] md:text-[16px] font-medium text-[#000000] tracking-widest uppercase">
           [Our Services]
         </span>
@@ -187,8 +187,8 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* ── Section 2: Client Satisfaction & Metrics ── */}
-      <div className="w-full max-w-[1235px] my-24 md:my-32 flex flex-col gap-12 px-4 md:px-0">
+      {/* ── Section 2: Client Satisfaction & Metrics (Grid showing successful visa applications, satisfaction rate, etc.) ── */}
+      <div className="w-full max-w-[1235px] py-15 md:py-30 flex flex-col gap-12 px-4 md:px-0">
         {/* Headline & Sub-headline */}
         <div className="flex flex-col gap-4 text-center max-w-[750px] mx-auto">
           <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-medium text-[#171A1E] leading-[48px] tracking-normal">
@@ -208,7 +208,7 @@ export default function ServicesPage() {
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           {/* ── Card 1: Visa Applications ── */}
-          <div className="bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div className="bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
             <div className="flex items-center justify-center w-14 h-14 bg-[#EDEDEA] rounded-full mb-6">
               <img src="/images/svg/folder.svg" alt="Visa icon" className="w-6 h-6" />
             </div>
@@ -221,7 +221,7 @@ export default function ServicesPage() {
           </div>
 
           {/* ── Card 2: Client Satisfaction ── */}
-          <div className="bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div className="bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
             <div className="flex items-center justify-center w-14 h-14 bg-[#EDEDEA] rounded-full mb-6">
               <img src="/images/svg/people.svg" alt="Satisfaction icon" className="w-6 h-6" />
             </div>
@@ -234,7 +234,7 @@ export default function ServicesPage() {
           </div>
 
           {/* ── Card 3: Destination Countries ── */}
-          <div className="bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div className="bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
             <div className="flex items-center justify-center w-14 h-14 bg-[#EDEDEA] rounded-full mb-6">
               <img src="/images/svg/star.svg" alt="Countries icon" className="w-6 h-6" />
             </div>
@@ -247,7 +247,7 @@ export default function ServicesPage() {
           </div>
 
           {/* ── Card 4: Years of Experience ── */}
-          <div className="bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div className="bg-white border border-[#E0E0E0]/30 rounded-[12px] p-6 flex flex-col items-start shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5">
             <div className="flex items-center justify-center w-14 h-14 bg-[#EDEDEA] rounded-full mb-6">
               <img src="/images/svg/bulb.svg" alt="Experience icon" className="w-6 h-6" />
             </div>
@@ -261,8 +261,8 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* ── Section 3: Immigration Pathways Grid ── */}
-      <div className="w-full bg-[#ffffff] py-24 md:py-32 flex flex-col items-center ">
+      {/* ── Section 3: Immigration Pathways Grid (Cards detailing core services: risk assessment, talent strategy, etc.) ── */}
+      <div className="w-full bg-[#ffffff] py-15 md:py-30 flex flex-col items-center ">
         <div className="w-full max-w-[1235px] px-6 md:px-0 flex flex-col gap-10">
           <div className="w-full flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="flex flex-col items-start gap-1">
@@ -298,7 +298,7 @@ export default function ServicesPage() {
             {pathways.map((svc) => (
               <div
                 key={svc.id}
-                className="group bg-[#F9F9F8] rounded-[12px] p-6.5 flex flex-col items-start gap-6"
+                className="group bg-[#F9F9F8] rounded-[12px] p-6.5 flex flex-col items-start gap-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md"
               >
                 <div className="flex items-center justify-center w-10 h-10">{svc.icon}</div>
                 <div className="flex flex-col gap-2">
@@ -334,8 +334,8 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* ── Section 4: Friendly Asked Questions ── */}
-      <div className="w-full bg-[#F9F9F8] py-20 md:py-20 flex justify-center ">
+      {/* ── Section 4: Friendly Asked Questions (Accordion list of common inquiries about timelines and pathways) ── */}
+      <div className="w-full bg-[#F9F9F8] py-15 md:py-30 flex justify-center ">
         <div className="w-full max-w-[1235px] px-4 md:px-0 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
           {/* Left Column: Title & CTA card */}
           <div className="lg:col-span-5 flex flex-col justify-between gap-8 lg:gap-0 py-0">
@@ -427,8 +427,8 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* ── Section 5: CTA Banner (Work with Experts) ── */}
-      <div className="w-full max-w-[1235px] px-4 py-12 md:py-[100px] md:px-[30px] bg-[#ffffff]">
+      {/* ── Section 5: Work with Experts to Build Your Grow (CTA banner with quick checklist and link to contact form) ── */}
+      <div className="w-full max-w-[1235px] px-4 py-15 md:py-30 md:px-[30px] bg-[#ffffff]">
         <div className="bg-[#000000] rounded-[12px] p-3 text-white overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[380px]">
           {/* Left Column: CTA Texts */}
           <div className="lg:col-span-7 py-8 px-1 sm:p-8 md:p-12 lg:p-5 lg:py-15 flex flex-col justify-between items-start gap-8">
